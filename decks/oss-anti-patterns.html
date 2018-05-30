@@ -36,29 +36,6 @@
       link.href = window.location.search.match( /print-pdf/gi ) ? '../css/print/pdf.css' : '../css/print/paper.css';
       document.getElementsByTagName( 'head' )[0].appendChild( link );
     </script>
-        
-    <!-- Override default styles -->
-    <style>
-      <!-- Transparent background image on all slides -->
-      body {
-        position: relative;
-        z-index: 1;
-      }
-      body::before {
-        content: "";
-        position: absolute;
-        top: 0; 
-        left: 0;
-        width: 100%; 
-        height: 100%;  
-        opacity: .15; 
-        z-index: -1;
-        background: url( '../images/tomcat.svg' );
-        background-position: center;
-        background-size: 100%;
-        background-repeat: no-repeat;
-      }
-    </style>
   </head>
   <body>
     <div class="reveal">
@@ -68,7 +45,87 @@
         </section>
         <section data-external-replace="../modules/intro-asf.html"> </section>
         <section>
-          <h2>TODO</h2>
+          <h2>Agenda</h2>
+          <p>Why?</p>
+          <p>Specifics</p>
+          <p>Generalisations</p>
+        </section>
+        <section>
+          <h2>Why</h2>
+          <p>Range of projects</p>
+          <p>Struggling projects</p>
+          <p>Share observations more widely</p>
+          <p>Hopefully help other projects</p>
+        </section>
+        <section>
+          <h2>Personal views</h2>
+          <p>Not representing the ASF</p>
+          <p>Not representing my employer</p>
+        </section>
+        <section>
+          <h1>Specifics</h1>
+        </section>
+        <section>
+          <h2>Releases</h2>
+          <p>Catalysts for activity</p>
+          <p>Should be easy</p>
+          <p>Monthly releases should not be a burden</p>
+          <p><i>No releases for more than a year</i></p> 
+        </section>
+        <section>
+          <h2>Adding committers</h2>
+          <p>The lower the bar, the healthier the community</p>
+          <p>Version control makes fixing errors easy</p>
+          <p><i>New committer criteria / checklist</i></p>
+          <p><i>No new committers for more than a year</i></p> 
+        </section>
+        <section>
+          <h2>Dominant committers</h2>
+          <p>Full-time vs. occasional</p>
+          <p>Speed of decision making</p>
+          <p><i>Small number of committers dominating the project</i></p>
+        </section>
+        <section>
+          <h2>Tool config</h2>
+          <p>Jira has lots of configuration options</p>
+          <p>GitHub reviews and CI tooling</p>
+          <p><i>Rigid processes</i></p>
+        </section>
+        <section>
+          <h2>Project managers</h2>
+          <p>ASF specific?</p>
+          <p>Committers are individuals</p>
+          <p>Committers scratch their own itch</p>
+          <p><i>One committer directing other committers</i></p>
+        </section>
+        <section>
+          <h2>Private communication</h2>
+          <p>Should be minimal</p>
+          <p><i>More private mail than public mail</i></p> 
+        </section>
+        <section>
+          <h2>Off-list communication</h2>
+          <p>Hard to identify</p>
+          <p><i>Lots of co-ordinated activity but no discussion</i></p>
+        </section>
+        <section>
+          <h2>Policy bypass</h2>
+          <p>ASF specific?</p>
+          <p>Policy is there for a reason</p>
+          <p>It shouldn't get in the way</p>
+          <p><i>Trying to work around policy</i></p>
+        </section>
+        <section>
+          <h1>Generalisation</h1>
+        </section>
+        <section>
+          <h2>Technical vs. Social controls</h2>
+          <p>Keep the technical controls to a minimum</p>
+          <p>Social controls are effective</p>
+        </section>
+        <section>
+          <h2>Barriers</h2>
+          <p>Lower barriers create healthier projects</p>
         </section>
         <section data-external-replace="../modules/closing.html"> </section>
       </div>
