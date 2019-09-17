@@ -72,14 +72,27 @@
           <p>Looking back over the last 12 months</p>
         </section>
         <section>
+          <h3>Celebrating 20 years of Tomcat</h3>
+          <p>Jakarta formed in August 1999</p>
+          <p>Tomcat 3 and Jasper code donations by Sun Microsystems in September</p>
+          <p>First Tomcat 3 release in December</p>
+          <p>Tomcat 4 (Catalina container) development started concurrently</p>
+        </section>
+        <section>
           <h3>Community</h3>
-          <p>Emmanuel Bourg (ebourg) joined the PMC</p>
-          <p>Igal Sapir (isapir) joined as a committer</p>
-          <p>18 committers - 4 active</p>
-          <p>27 PMC members - 14 active</p>
-          <p>TomcatCon London</p>
-          <p>TomcatCon Training Manchester</p>
-          <p>ApacheCon EU Roadshow</p>
+          <p>Igal Sapir (isapir) joined the PMC</p>
+          <p>18 committers - ~8 active</p>
+          <p>28 PMC members - ~15 active</p>
+          <p>ApacheCon EU 2018, Berlin</p>
+          <p>EU FOSSA Hackathon, Brussels</p>
+          <p>ApacheCon NA 2019, Las Vegas</p>
+        </section>
+        <section>
+          <h3>Migration to Git</h3>
+          <p>Tomcat 9.0.x, 8.5.x and 7.0.x migrated to a single Git repo</p>
+          <p>Tomcat Native migrated
+          <br/>
+          <p>mod_jk, website, taglibs and Maven plug-in still in svn</p>
         </section>
         <section>
           <h3>Releases</h3>
@@ -89,108 +102,119 @@
               <th>A</th><th>M</th><th>J</th><th>J</th><th>A</th><th>S</th>
             </tr>
             <tr>
-              <td>9.0.x</td><td>-</td><td>X</td><td>-</td><td>X</td><td>X</td><td>X</td>
-              <td>X</td><td>X</td><td>X</td><td>-</td><td>X</td><td>X</td>
+              <td>9.0.x</td><td>-</td><td>X</td><td>X</td><td>-</td><td>X</td><td>X</td>
+              <td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td>
             </tr>
             <tr>
-              <td>8.5.x</td><td>X</td><td>X</td><td>-</td><td>X</td><td>X</td><td>X</td>
-              <td>X</td><td>X</td><td>X</td><td>-</td><td>X</td><td>X</td>
+              <td>8.5.x</td><td>-</td><td>X</td><td>X</td><td>-</td><td>X</td><td>X</td>
+              <td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td>
             </tr>
             <tr>
-              <td>8.0.x</td><td>X</td><td>-</td><td>X</td><td>X</td><td>X</td><td>-</td>
-              <td>X</td><td>X</td><td>-</td><td>F</td><td>-</td><td>-</td>
+              <td>7.0.x</td><td>-</td><td>X</td><td>-</td><td>-</td><td>X</td><td>-</td>
+              <td>X</td><td>-</td><td>-</td><td>X</td><td>-</td><td>-</td>
             </tr>
             <tr>
-              <td>7.0.x</td><td>X</td><td>-</td><td>-</td><td>X</td><td>X</td><td>-</td>
-              <td>X</td><td>X</td><td>-</td><td>X</td><td>-</td><td>-</td>
+              <td>Native</td><td>X</td><td>-</td><td>X</td><td>X</td><td>-</td><td>-</td>
+              <td>-</td><td>-</td><td>-</td><td>X</td><td>-</td><td>-</td>
             </tr>
             <tr>
-              <td>Native</td><td>-</td><td>X</td><td>-</td><td>-</td><td>-</td><td>-</td>
-              <td>-</td><td>-</td><td>X</td><td>-</td><td>-</td><td>-</td>
-            </tr>
-            <tr>
-              <td>mod_jk</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>X</td>
-              <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>X</td>
+              <td>mod_jk</td><td>X</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
+              <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
             </tr>
           </table>
         </section>
         <section>
-          <h3>Tomcat 9</h3>
-          <p>Java EE 8 released September 2017</p>
-          <p>First stable release (9.0.4) 2018-01-22</p>
-        </section>
-        <section>
           <h3>JRE fixes</h3>
-          <p>Memory leak in the common fork-join pool</p>
-          <p>LogManager change triggered stack trace on Tomcat start</p>
-          <p>TLS handshake bug when speaks TLS 1.3 but server does not</p> 
+          <p>Highlighted potential issue with TLS 1.3 and no Post-Handshake Authentication
+             support in JSSE.</p>
+          <p>PKCS12 handling - had to read entire file in one go</p>
         </section>
         <section>
           <h3>JRE Releases</h3>
-          <p>Java 9 arrived...</p>
-          <p>... and reached EOL</p>
-          <p>Java 10 arrived...</p>
-          <p>... and has (almost) reached EOL</p>
-          <p>Java 11 has (almost) arrived</p>
+          <p>Java 10 reached EOL</p>
+          <p>Java 11 LTS has arrived</p>
+          <p>Java 12 has arrived...</p>
+          <p>... and (almost) reached EOL</p>
+          <p>Java 13 has (almost) arrived</p>
         </section>
         <section>
           <h3>Metrics</h3>
-          <p>Fixed ~150 bugs</p>
-          <p>Another ~100 bugs resolved</p>
+          <p>Fixed ~130 bugs</p>
+          <p>Another ~90 bugs resolved</p>
           <p>Typically ~5 open bugs</p>
           <p>Less than 90 open enhancement requests</p>
-          <p>130k LoC</p>
-        </section>
-        <section>
-          <h3>Hiccups</h3>
-          <p>Request line validation</p>
-          <p>Host validation</p>
+          <p>133k LoC</p>
         </section>
         <section>
           <h3>Security</h3>
-          <p>CVE-2018-1304/5: Security constraints</p>
-          <p>CVE-2018-1307: Async timeout race</p>
-          <p>CVE-2018-1336: UTF-8</p>
-          <p>CVE-2018-8014: CORS defaults</p>
+          <p>CVE-2019-0199, 10072: HTTP/2 DoS</p>
+          <p>CVE-2019-0232: CGI RCE on Windows with non-default configuration</p>
         </section>
         <section>
           <h3>New/Improved Features</h3>
-          <p>Update TLS configuration without restart</p>
-          <p>JSP pre-compilation is multi-threaded</p>
-          <p>web-fragment.xml support for JspC</p>
-          <p>OSGI metadata</p>
+          <p>TLS configuration interoperability between JSSE and OpenSSL</p>
+          <p>Graal</p>
+          <p>Containers</p>
+          <p>Clustering in the cloud</p>
+        </section>
+        <section>
+          <h2>Jakarta EE</h2>
+        </section>
+        <section>
+          <h3>Original Timetable</h3>
+          <p>Jakarta EE 8 (== JavaEE 8) June 2018</p>
+          <p>Servlet.next (and other updated specs) December 2018</p>
+        </section>
+        <section>
+          <h3>Actual Timetable</h3>
+          <p>EE4J 8 - Passed JavaEE 8 TCKs - January 2019</p>
+          <p>Jakarta EE 8 - Passed Jakarta EE TCKs - September 2019</p>
+          <br>
+          <p>Jakarta EE.next - TBD</p>
+        </section>
+        <section>
+          <h3>EE4J 8</h3>
+          <p>Started to see wider community engagement</p>
+          <p>Cross-project coordination was tricky (as expected)</p>
+          <p>Sense of conversations happening elsewhere</p>
+          <p>Great to have access to the TCKs again</p>
+          <p>Minor frustrations - fixes that triggered TCK failures</p>
+          <p>Fixed bugs in master ready for next iteration of the specifications</p>
+        </section>
+        <section>
+          <h3>Jakarta EE 8</h3>
+          <p>Started with a list of tasks to be completed - while I was on holiday</p>
+          <p>Seemed to be less community involvement</p>
+          <p>Greater sense of conversations happening elsewhere</p>
+          <p>Hugely frustrating to see fixes in master reverted</p>
+        </section>
+        <section>
+          <h3>TCKs</h3>
+          <p>Bug in Servlet TCK - related to date formatting</p>
+          <p>Requires server to run in US locale for TCK to pass</p>
+          <p>PR was accepted and applied to fix this</p>
+          <p>IBM saw a test failure (2 digit rather than 4 digit years)</p>
+          <p>Opted to revert the fix</p>
+          <p>So, Tomcat is spec compliant but fails the TCK</p>
+          <p>IBM's server is not spec compliant but passes the TCK</p>
+          <p>Sigh</p>
+        </section>
+        <section>
+          <h3>Current issues</h3>
+          <p>Schedule for Servlet.next</p>
+          <p>Packing renaming is unresolved</p>
+          <p>Donation of Java EE not yet complete (spec text)</p>
         </section>
         <section>
           <h2>Future Plans</h2>
         </section>
         <section>
           <h3>Tomcat 10</h3>
-          <p>Java EE donation to Eclipse is in progress</p>
-          <p>Jakarta EE 8 (== Java EE 8)<br/>was expected June 2018</p>
-          <p>(Servlet | WebSocket | JSP | EL).next<br/>was expected from December 2018</p>
-          <p>No firm plans</p>
-        </section>
-        <section>
-          <h3>Tomcat 10</h3>
+          <p>Servlet.next (and any other updated specs)</p>
+          <br>
           <p>Remove APR/native connector</p> 
           <p>Support for OpenSSL clones</p>
-          <p>Modernization of native code</p>
-        </section>
-        <section>
-          <h3>HTTP/2</h3>
-          <p>Reduce GC</p> 
-          <p>Reduce resource usage</p>
-        </section>
-        <section>
-          <h3>Reactive I/O</h3>
-          <p>Back pressure</p> 
-          <p>May be included in Servlet.next</p>
-        </section>
-        <section>
-          <h3>Cloud Clustering</h3>
-          <p>Static membership is not flexible</p>
-          <p>Dynamic membership (currently) requires multi-cast</p>
-          <p>Cloud agnostic</p>
+          <p>Modernisation of native code</p>
         </section>
         <section data-external-replace="../modules/closing.html"> </section>
       </div>
