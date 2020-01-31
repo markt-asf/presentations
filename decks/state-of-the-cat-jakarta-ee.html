@@ -1,0 +1,253 @@
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>State of the Cat</title>
+
+    <link rel="stylesheet" href="../css/reveal.css">
+    <link rel="stylesheet" href="../css/theme/white.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '../css/print/pdf.css' : '../css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+        
+    <!-- Override default styles -->
+    <style>
+      <!-- Transparent background image on all slides -->
+      body {
+        position: relative;
+        z-index: 1;
+      }
+      body::before {
+        content: "";
+        position: absolute;
+        top: 0; 
+        left: 0;
+        width: 100%; 
+        height: 100%;  
+        opacity: .15; 
+        z-index: -1;
+        background: url( '../images/tomcat.svg' );
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+      p {
+        text-align: left
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>State of the Cat</h1>
+          <h2>Tomcat 10 / Jakarta EE Progress Update</h2>
+        </section>
+        <section data-external-replace="../modules/intro-asf.html"> </section>
+        <section>
+          <h2>Jakarta EE</h2>
+        </section>
+        <section>
+          <h3>Jakarta EE 8</h3>
+          <p>Renamed Java EE 8</p>
+          <p>No functional changes</p>
+          <p>Some very minor clean-up (Javadoc typos)</p>
+          <p>No specification documents</p>
+        </section>
+        <section>
+          <h3>Jakarta EE 9</h3>
+          <p>Change in package from javax.* to jakarta.*</p>
+          <p>Breaking change</p>
+          <p>No functional changes</p>
+          <p>More clean-up but only if binary compatible</p>
+          <p>Will included updated specification documents</p>
+        </section>
+        <section>
+          <h3>Tomcat implements</h3>
+          <p>Jakarta Servlet</p>
+          <p>Jakarta Server Pages</p>
+          <p>Jakarta Expression Language</p>
+          <p>Jakarta WebSocket</p>
+          <p>Jakarta Debugging Support for Other Languages</p>
+          <p>Jakarta Annotations (Common Annotations)</p>
+          <p>Jakarta Authentication (JASPIC)</p>
+        </section>
+        <section>
+          <h3>Jakarta release plan</h3>
+          <p>Release candidates ASAP</p>
+          <p>Final release in June</p>
+        </section>
+        <section>
+          <h3>Jakarta Servlet</h3>
+          <p>Package rename complete</p>
+          <p>M1 release available</p>
+          <p>Specification document just arrived in git</p>
+          <p>Some minor clean-up completed</p>
+          <p>Some minor clean-up still planned</p>
+          <p>Discussing some new features (for Servlet 5.1)</p>
+          <p>TODO: clean-up spec, TCK, review open issues, release</p>
+        </section>
+        <section>
+          <h3>Jakarta JSP</h3>
+          <p>Package rename complete</p>
+          <p>M1 release available</p>
+          <p>Specification document just arrived in git</p>
+          <p>Some minor clean-up still planned</p>
+          <p>JDSOL part of JSP</p>
+          <p>TODO: clean-up spec, TCK, review open issues, release</p>
+        </section>
+        <section>
+          <h3>Jakarta EL</h3>
+          <p>Package rename complete</p>
+          <p>M1 release available</p>
+          <p>Specification document updated</p>
+          <p>Minor clean-up complete</p>
+          <p>PR for TCK update in review</p>
+          <p>Reviewed open issues</p>
+          <p>TODO: discuss open issues, release</p>
+        </section>
+        <section>
+          <h3>Jakarta WebSocket</h3>
+          <p>Package rename complete</p>
+          <p>M1 release available</p>
+          <p>Specification document updated</p>
+          <p>TODO: TCK, review open issues, release</p>
+        </section>
+        <section>
+          <h2>Tomcat</h2>
+        </section>
+        <section>
+          <h3>Tomcat 10+ aims</h3>
+          <p>Support Java EE 8 as long as there is demand</p>
+          <p>Support Jakarta EE 9 onwards</p>
+          <p>Provide a Java EE to Jakarta EE migration path</p>
+          <br/>
+          <p>Note: Expect Jakarta EE 10 to follow Jakarta EE 9 fairly quickly</p>
+        </section>
+        <section>
+          <h3>Completed</h3>
+          <p>Create a new 9.0.x branch from master</p>
+          <ul>
+          <li>master (10.0.0.x) Jakarta EE 9 development</li>
+          <li>9.0.x : Java EE 8 support</li>
+          <li>8.5.x : Java EE 7 support</li>
+          <li>7.0.x : Java EE 6 support</li>
+          <li>Migration tool</li>
+          </ul>
+          <p>Jakarta EE 9 package rename</p>
+          <p>Realm API clean-up</p>
+          <p>Cache size updates for I/O layer</p>
+        </section>
+        <section>
+          <h3>In progress</h3>
+          <p>EOL for 7.0.x (31 March 2021?)
+          <p>Other Tomcat 10 API changes</p>
+          <p>Monthly releases of 10.0.0.x, 9.0.x, 8.5.x</p>
+        </section>
+        <section>
+          <h3>When Jakarta EE 9 is released</h3>
+          <p>Release 10.0.0.0</p>
+          <p>Support for 10.0.0.x continues on master</p>
+        </section>
+        <section>
+          <h3>When Jakarta EE 10 work starts</h3>
+          <p>Create 10.0.0.x branch</p>
+          <p>master becomes development branch for Jakarta EE 10
+        </section>
+        <section>
+          <h3>When Jakarta EE 10 is released</h3>
+          <p>Release 10.0.1</p>
+          <p>Support for 10.0.x continues on master</p>
+          <p>Cease support for 10.0.0.x (Jakarta EE 9)
+          <p>Create 9.10.x branch (from master with package rename &amp; API changes reverted)</p>
+          <p>Support for 9.10.x continues on 9.10.x</p>
+          <p>Support for 9.0.x continues on 9.0.x</p>
+          <p>Support for 8.5.x continues on 8.5.x</p>
+        </section>
+        <section>
+          <h3>When Jakarta EE 11 work starts</h3>
+          <p>Create 10.0.x branch</p>
+          <p>Plan EOL for 8.5.x</p>
+          <p>master becomes development branch for Jakarta EE 11
+        </section>
+        <section>
+          <h3>When Jakarta EE 11 is released</h3>
+          <p>Release 11.0.0</p>
+          <p>Create 9.11.x branch (from master with package rename &amp; API changes reverted)</p>
+          <p>Support for 11.0.x continues on master</p>
+          <p>Cease support for 9.10.x</p>
+          <p>Support for 10.0.x continues on 10.0.x</p>
+          <p>Support for 9.0.x continues on 9.0.x</p>
+          <p>And so on...</p>
+        </section>
+        <section>
+          <h3>Eventually</h3>
+          <p>N (master): Supports Jakarta EE N</p>
+          <p>(N-1): Supports Jakarta EE (N-1)</p>
+          <p>(N-2): Supports Jakarta EE (N-2)</p>
+          <p>9.N: Continues to support Java EE 8 with Tomcat API identical to latest Tomcat N</p>
+          <p>See <a href="https://cwiki.apache.org/confluence/display/TOMCAT/Jakarta+EE+Release+Numbering">https://cwiki.apache.org/confluence/display/
+          TOMCAT/Jakarta+EE+Release+Numbering</a>
+        </section>
+        <section>
+          <h3>Migration tool</h3>
+          <p><a href="https://github.com/apache/tomcat-jakartaee-migration">github.com/apache/tomcat-jakartaee-migration</a></p>
+          <p>No release so far</p>
+          <p>Only handles specifications used by Tomcat</p>
+          <p>Packages matched by regular expression so easy to add others</p>
+          <p>Used to convert Java EE 8 JSTL API and implementation to Jakarta EE 9</p>
+          <p>Want to test with more complex applications - Jira</p>
+        </section>
+        <section data-external-replace="../modules/closing.html"> </section>
+      </div>
+    </div>
+
+    <script src="../lib/js/head.min.js"></script>
+    <script src="../js/reveal.js"></script>
+
+    <script>
+      Reveal.initialize({
+        // - https://github.com/hakimel/reveal.js#configuration
+        history: true,
+        
+        // - https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          // Default dependencies
+          { src: '../plugin/markdown/marked.js' },
+          { src: '../plugin/markdown/markdown.js' },
+          { src: '../plugin/notes/notes.js', async: true },
+          { src: '../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          // reveal_external to allow composition from multiple files
+          { src: '../plugin/external/external.js', condition: function() { return !!document.querySelector( '[data-external],[data-external-replace]' ); } }
+        ]
+      });
+    </script>
+  </body>
+</html>
