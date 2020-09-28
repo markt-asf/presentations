@@ -65,43 +65,58 @@
       <div class="slides">
         <section>
           <h1>State of the Cat</h1>
+          <h3>Mark Thomas</h3>
+          <aside class="notes">
+            Welcome to the Tomcat track at ApacheCon @ Home 2020.
+          </aside>
         </section>
         <section data-external-replace="../modules/intro-asf.html"> </section>
         <section>
           <h2>Retrospective</h2>
           <p>Looking back over the last 12 months</p>
+          <p>Community</p>
+          <p>Code</p>
+          <p>Future plans</p>
         </section>
         <section>
-          <h3>Celebrating 20 years of Tomcat</h3>
-          <p>Jakarta formed in August 1999</p>
-          <p>Tomcat 3 and Jasper code donations by Sun Microsystems in September</p>
-          <p>First Tomcat 3 release in December</p>
-          <p>Tomcat 4 (Catalina container) development started concurrently</p>
+          <h2>Community</h2>
         </section>
         <section>
-          <h3>Community</h3>
-          <p>Igal Sapir (isapir) joined the PMC</p>
-          <p>18 committers - ~8 active</p>
+          <h3>People</h3>
+          <p>~2,900 subscribers to the users list</p>
+          <p>~80 contributors</p>
+          <p>Welcome to Raymond Augé (July 2020)</p>
+          <p>19 committers - ~4 active</p>
           <p>28 PMC members - ~15 active</p>
-          <p>ApacheCon NA 2018, Montreal</p>
-          <p>EU FOSSA Hackathon, Brussels</p>
-          <p>ApacheCon NA 2019, Las Vegas</p>
+          <aside class="notes">
+            Asking and answering questions<br/>
+            Translations, patches and pull requests<br/>
+            OSGi, JPMS<br/>
+            Your vote counts!
+          </aside>
+        </section>
+        <section>
+          <h3>Events</h3>
+          <p>ApacheCon Europe, October 2019</p>
+          <p>Past presentations: <a href="https://tomcat.apache.org/presentations.html">https://tomcat.apache.org/presentations.html</a></p>
+          <p>Google has provided $5,000 towards a security hackathon</p>
         </section>
         <section>
           <h3>Translations</h3>
-          <p><a href="http://poeditor.com">http://poeditor.com</a>
+          <p><a href="https://poeditor.com/projects/view?id=221603">https://poeditor.com/projects/view?id=221603</a>
           <p>Anyone can contribute</p>
-          <p>French moved from less than 20% to 100% coverage</p>
-          <p>Korean was added and has 100% coverage</p>
-          <p>Simplified Chinese was added and has 43% coverage</p>
-          <p>Also German, Spanish, Japanese and others have improved</p>
+          <p>Chinese and Japanese joined English, French and Korean at 100% coverage</p>
+          <p>Continue to see improvement in German, Spanish and Czech</p>
         </section>
         <section>
           <h3>Migration to Git</h3>
-          <p>Tomcat 9.0.x, 8.5.x and 7.0.x migrated to a single Git repo</p>
-          <p>Tomcat Native migrated
+          <p>Steady stream of PRs</p>
+          <p>mod_jk migrated to git</p>
           <br/>
-          <p>mod_jk, website, taglibs and Maven plug-in still in svn</p>
+          <p>website, taglibs and Maven plug-in still in svn</p>
+        </section>
+        <section>
+          <h2>Code</h2>
         </section>
         <section>
           <h3>Releases</h3>
@@ -111,108 +126,82 @@
               <th>A</th><th>M</th><th>J</th><th>J</th><th>A</th><th>S</th>
             </tr>
             <tr>
-              <td>9.0.x</td><td>-</td><td>X</td><td>X</td><td>-</td><td>X</td><td>X</td>
-              <td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td>
+              <td>10.0.x</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1<sup>st</sup></td><td>X</td>
+              <td>X</td><td>X</td><td>X</td><td>X</td><td>-</td><td>X</td>
             </tr>
             <tr>
-              <td>8.5.x</td><td>-</td><td>X</td><td>X</td><td>-</td><td>X</td><td>X</td>
-              <td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td>
+              <td>9.0.x</td><td>X</td><td>X</td><td>X</td><td>-</td><td>X</td><td>X</td>
+              <td>X</td><td>X</td><td>X</td><td>X</td><td>-</td><td>X</td>
             </tr>
             <tr>
-              <td>7.0.x</td><td>-</td><td>X</td><td>-</td><td>-</td><td>X</td><td>-</td>
-              <td>X</td><td>-</td><td>-</td><td>X</td><td>-</td><td>-</td>
+              <td>8.5.x</td><td>X</td><td>X</td><td>X</td><td>-</td><td>X</td><td>X</td>
+              <td>X</td><td>X</td><td>X</td><td>X</td><td>-</td><td>X</td>
             </tr>
             <tr>
-              <td>Native</td><td>X</td><td>-</td><td>X</td><td>X</td><td>-</td><td>-</td>
-              <td>-</td><td>-</td><td>-</td><td>X</td><td>-</td><td>-</td>
+              <td>7.0.x</td><td>-</td><td>-</td><td>X</td><td>-</td><td>X</td><td>X</td>
+              <td>-</td><td>X</td><td>-</td><td>X</td><td>-</td><td>X</td>
             </tr>
             <tr>
-              <td>mod_jk</td><td>X</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
+              <td>Native</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
+              <td>X</td><td>-</td><td>-</td><td>-</td><td>-</td><td>X</td>
+            </tr>
+            <tr>
+              <td>mod_jk</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>X</td>
               <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
             </tr>
           </table>
         </section>
         <section>
-          <h3>JRE fixes</h3>
-          <p>Highlighted potential issue with TLS 1.3 and no Post-Handshake Authentication
-             support in JSSE.</p>
-          <p>PKCS12 handling - had to read entire file in one go</p>
-        </section>
-        <section>
-          <h3>JRE Releases</h3>
-          <p>Java 10 reached EOL</p>
-          <p>Java 11 LTS has arrived</p>
-          <p>Java 12 has arrived and reached EOL</p>
-          <p>Java 13 has arrived</p>
+          <h3>OpenJDK</h3>
+          <p>Number and progress on reported bugs has slowed</p>
+          <p>Java 13 reached EOL</p>
+          <p>Java 14 arrived and reached EOL</p>
+          <p>Java 15 arrived</p>
+          <p>Test early access releases</p>
+          <p>Aim to be buildable with any current Java version</p>
         </section>
         <section>
           <h3>Metrics</h3>
-          <p>Fixed ~130 bugs</p>
-          <p>Another ~90 bugs resolved</p>
+          <p>Fixed ~150 bugs</p>
+          <p>Another ~95 bugs resolved</p>
           <p>Typically ~5 open bugs</p>
-          <p>Less than 90 open enhancement requests</p>
-          <p>133k LoC</p>
+          <p>Currently ~80 open enhancement requests</p>
+          <p>135 pull requests</p>
+          <p>133k LoC (no change in 12 months)</p>
         </section>
         <section>
           <h3>Security</h3>
-          <p>CVE-2019-0199, 10072: HTTP/2 DoS</p>
-          <p>CVE-2019-0232: CGI RCE on Windows with non-default configuration</p>
+          <p>CVE-2020-1938: AJP request injection</p>
+          <p>CVE-2020-9484: RCE via session persistence</p>
         </section>
         <section>
           <h3>New/Improved Features</h3>
-          <p>TLS configuration interoperability between JSSE and OpenSSL</p>
-          <p>Graal</p>
-          <p>Containers</p>
-          <p>Clustering in the cloud</p>
+          <p>Use ALPN with Java 8 where supported</p>
+          <p>Deprecated the JMX lifecycle listener</p>
+          <p>More secure defaults for AJP</p>
         </section>
         <section>
-          <h2>Jakarta EE</h2>
+          <h3>Jakarta EE</h3>
+          <p>Jakarta EE 9 is package rename only</p>
+          <p>Expected by the end of the year</p>
+          <p>Tomcat 10.0.x</p>
+          <p>More detail in next session</p>
         </section>
         <section>
-          <h3>Original Timetable</h3>
-          <p>Jakarta EE 8 (== JavaEE 8) June 2018</p>
-          <p>Servlet.next (and other updated specs) December 2018</p>
+          <h3>Future Plans</h3>
+          <p>Tomcat 10.0 beta expected end 2020 / early 2021</p>
+          <p>Tomcat 10.0 stable expected shortly afterwards</p>
+          <p>Tomcat 10.0 will track minor spec updates</p>
+          <p>Start on Tomcat 10.1 / Jakarta EE 10?</p>
         </section>
         <section>
-          <h3>Actual Timetable</h3>
-          <p>EE4J 8 - Passed JavaEE 8 TCKs - January 2019</p>
-          <p>Jakarta EE 8 - Passed Jakarta EE TCKs - September 2019</p>
-          <br>
-          <p>Jakarta EE.next - TBD</p>
-        </section>
-        <section>
-          <h3>EE4J 8</h3>
-          <p>Started to see wider community engagement</p>
-          <p>Cross-project coordination was tricky (as expected)</p>
-          <p>Sense of conversations happening elsewhere</p>
-          <p>Great to have access to the TCKs again</p>
-          <p>Minor frustrations - fixes that triggered TCK failures</p>
-          <p>Fixed bugs in master ready for next iteration of the specifications</p>
-        </section>
-        <section>
-          <h3>Jakarta EE 8</h3>
-          <p>Started with a list of tasks to be completed - while I was on holiday</p>
-          <p>Seemed to be less community involvement</p>
-          <p>Greater sense of conversations happening elsewhere</p>
-          <p>Some clean-up reverted in individual APIs</p>
-          <p>Handful of bug fixes reverted in TCKs</p>
-        </section>
-        <section>
-          <h3>Current issues</h3>
-          <p>Schedule for Servlet.next</p>
-          <p>Packing renaming is unresolved</p>
-          <p>Donation of Java EE not yet complete (spec text)</p>
-        </section>
-        <section>
-          <h2>Future Plans</h2>
-        </section>
-        <section>
-          <h3>Tomcat 10</h3>
-          <p>Servlet.next (and any other updated specs)</p>
-          <br>
-          <p>Remove APR/native connector</p> 
-          <p>Support for OpenSSL clones</p>
-          <p>Modernisation of native code</p>
+          <h3>Contribute</h3>
+          <p>Join the users list, answer questions</p>
+          <p>Test release candidates</p>
+          <p>Review and/or add translations</p>
+          <p>Maven Plug-in</p>
+          <p>Javadoc fixes</p>
+          <p>Or soemthing else...</p>
         </section>
         <section data-external-replace="../modules/closing.html"> </section>
       </div>
