@@ -67,84 +67,112 @@
     <div class="reveal">
       <div class="slides">
         <section>
-          <h1>State of the Cat</h1>
-          <h2>Tomcat 10 / Jakarta EE Progress Update</h2>
+          <h1>Tomcat 10 and Jakarta EE</h1>
+          <h3>Mark Thomas</h3>
         </section>
         <section data-external-replace="../modules/intro-asf.html"> </section>
         <section>
-          <h2>Jakarta EE</h2>
+          <h2>Background</h2>
+        </section>
+        <section>
+          <h3>Java EE 8</h3>
+          <p>Tomcat 9 implements a subset of specifications</p>
+          <ul>
+            <li>Servlet</li>
+            <li>Java Server Pages</li>
+            <li>Java Unified Expression Language</li>
+            <li>Java WebSocket</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Java EE 8</h3>
+          <p>Tomcat 9 also implements:</p>
+          <ul>
+            <li>Java Debugging Support for Other Languages</li>
+            <li>Java Authentication Service Provider Interface for Containers</li>
+            <li>Common Annotations</li>
+          </ul>
         </section>
         <section>
           <h3>Jakarta EE 8</h3>
-          <p>Renamed Java EE 8</p>
+          <p>Re-badged Java EE 8</p>
           <p>No functional changes</p>
           <p>Some very minor clean-up (Javadoc typos)</p>
           <p>No specification documents</p>
         </section>
         <section>
-          <h3>Jakarta EE 9</h3>
-          <p>Change in package from javax.* to jakarta.*</p>
-          <p>Breaking change</p>
+          <h2>Jakarta EE 9</h2>
+        </section>
+        <section>
+          <h3>Changes in Jakarta EE 9</h3>
+          <p><code>javax.*</code> renamed to <code>jakarta.*</code></p>
+          <p>packages, request attributes, system properties, etc.</p>
           <p>No functional changes</p>
-          <p>More clean-up but only if binary compatible</p>
-          <p>Will included updated specification documents</p>
+          <p>No new functionality</p>
+          <p>More clean-up but only if binary compatible (ignoring the package rename)</p>
+          <p>Includes updated specification documents</p>
         </section>
         <section>
-          <h3>Tomcat implements</h3>
-          <p>Jakarta Servlet</p>
-          <p>Jakarta Server Pages</p>
-          <p>Jakarta Expression Language</p>
-          <p>Jakarta WebSocket</p>
-          <p>Jakarta Debugging Support for Other Languages</p>
-          <p>Jakarta Annotations (Common Annotations)</p>
-          <p>Jakarta Authentication (JASPIC)</p>
+          <h3>Impact</h3>
+          <p>Everything breaks</p>
+          <p>Everything needs to be updated</p>
+          <p>Everything needs to be recompiled</p>
+          <p>Should be a &quot;simple&quot; global rename</p>
+          <p>You can't target both Jakarta EE 8 and 9</p> 
         </section>
         <section>
-          <h3>Jakarta release plan</h3>
-          <p>Release candidates ASAP</p>
-          <p>Final release in June</p>
+          <h3>Why?</h3>
+          <p>Primary audience is tool vendors</p>
+          <p>Not targeted at end users</p>
+          <p>End users can migrate if they wish</p>
         </section>
         <section>
-          <h3>Jakarta Servlet</h3>
-          <p>Package rename complete</p>
-          <p>M1 release available</p>
-          <p>Specification document just arrived in git</p>
-          <p>Some minor clean-up completed</p>
-          <p>Some minor clean-up still planned</p>
-          <p>Discussing some new features (for Servlet 5.1)</p>
-          <p>TODO: clean-up spec, TCK, review open issues, release</p>
+          <h3>Help!</h3>
+          <p>Migration doesn't have to be painful</p>
+          <p>Migration can be automated</p>
+          <p>There is an <a href="https://github.com/apache/tomcat-jakartaee-migration">automatic migration tool</a><br/>
+             (github.com/apache/tomcat-jakartaee-migration)</p>
         </section>
         <section>
-          <h3>Jakarta JSP</h3>
-          <p>Package rename complete</p>
-          <p>M1 release available</p>
-          <p>Specification document just arrived in git</p>
-          <p>Some minor clean-up still planned</p>
-          <p>JDSOL part of JSP</p>
-          <p>TODO: clean-up spec, TCK, review open issues, release</p>
+          <h2>Tomcat's Jakarta EE 9 Support</h2>
         </section>
         <section>
-          <h3>Jakarta EL</h3>
-          <p>Package rename complete</p>
-          <p>M1 release available</p>
-          <p>Specification document updated</p>
-          <p>Minor clean-up complete</p>
-          <p>PR for TCK update in review</p>
-          <p>Reviewed open issues</p>
-          <p>TODO: discuss open issues, release</p>
+          <h3>Jakarta EE 9</h3>
+          <p>Jakarta EE 9 development work is essentially complete</p>
+          <p>Working through Jakarta Platform release process</p>
+          <p>Expected release December 2020</p>
         </section>
         <section>
-          <h3>Jakarta WebSocket</h3>
-          <p>Package rename complete</p>
-          <p>M1 release available</p>
-          <p>Specification document updated</p>
-          <p>TODO: TCK, review open issues, release</p>
+          <h3>Tomcat 10.0.x</h3>
+          <p>Supports subset of Jakarta EE 9<br/>
+             (same as Tomcat 9 / Java EE 8)</p>
+          <p>Have been tracking the specification progress</p>
+          <p>TCK progress is tracked on the Tomcat wiki</p>
+          <p>Currently releasing alpha versions</p>
         </section>
         <section>
-          <h2>Tomcat</h2>
+          <h3>Transition to Beta</h3>
+          <p>Requires:</p>
+          <ul>
+            <li>Final specifications - due December 2020</li>
+            <li>Completed implementations - ready now</li>
+          </ul>
+          <p>Expect first beta release late 2020 / early 2021</p>
         </section>
         <section>
-          <h3>Tomcat 10+ aims</h3>
+          <h3>Transition to stable</h3>
+          <p>Requires:</p>
+          <ul>
+            <li>User feedback that it is stable</li>
+          </ul>
+          <p>Tomcat 10.0.x and 9.0.x very similar code bases</p>
+          <p>Expect Tomcat 10.0.x to be stable early in 2021</p> 
+        </section>
+        <section>
+          <h2>Jakarta EE 10 and beyond</h2>
+        </section>
+        <section>
+          <h3>Tomcat aims</h3>
           <p>Support Java EE 8 as long as there is demand</p>
           <p>Support Jakarta EE 9 onwards</p>
           <p>Provide a Java EE to Jakarta EE migration path</p>
@@ -152,78 +180,53 @@
           <p>Note: Expect Jakarta EE 10 to follow Jakarta EE 9 fairly quickly</p>
         </section>
         <section>
-          <h3>Completed</h3>
-          <p>Create a new 9.0.x branch from master</p>
-          <ul>
-          <li>master (10.0.0.x) Jakarta EE 9 development</li>
-          <li>9.0.x : Java EE 8 support</li>
-          <li>8.5.x : Java EE 7 support</li>
-          <li>7.0.x : Java EE 6 support</li>
-          <li>Migration tool</li>
-          </ul>
-          <p>Jakarta EE 9 package rename</p>
-          <p>Realm API clean-up</p>
-          <p>Cache size updates for I/O layer</p>
+          <h3>Current status</h3>
+          <p>10.0.x : Jakarta EE 9 development</p>
+          <p>9.0.x : Java EE 8 support</p>
+          <p>8.5.x : Java EE 7 support</p>
+          <p>7.0.x : Java EE 6 support (EOL 31 March 2021)</p>
+          <p>Migration tool</p>
         </section>
         <section>
-          <h3>In progress</h3>
-          <p>EOL for 7.0.x (31 March 2021?)
-          <p>Other Tomcat 10 API changes</p>
-          <p>Monthly releases of 10.0.0.x, 9.0.x, 8.5.x</p>
+          <h3>Jakarta EE 10 onwards</h3>
+          <p>10.0.x : Jakarta EE 9 support (only until 10.1.x is stable)</p>
+          <p>10.1.x : Jakarta EE 10 support</p>
+          <p>11.0.x : Jakarta EE 11 support</p>
+          <p>Y.0.x  : Jakarta EE Y support</p>
         </section>
         <section>
-          <h3>When Jakarta EE 9 is released</h3>
-          <p>Release 10.0.0.0</p>
-          <p>Support for 10.0.0.x continues on master</p>
+          <h3>Java EE 8 support</h3>
+          <p>Available as long as there is viable user community requiring it</p>
+          <p>Will track latest stable Tomcat release</p>
+          <p>9.10.x : Tomcat 10.1.x but with Java EE 8 API</p>
+          <p>9.11.x : Tomcat 11.0.x but with Java EE 8 API</p>
+          <p>9.Y.x  : Tomcat Y.0.x but with Java EE 8 API</p>
+          <p>Users will be expected to update to latest 9.y.x release for fixes</p>
         </section>
         <section>
-          <h3>When Jakarta EE 10 work starts</h3>
-          <p>Create 10.0.0.x branch</p>
-          <p>master becomes development branch for Jakarta EE 10
-        </section>
-        <section>
-          <h3>When Jakarta EE 10 is released</h3>
-          <p>Release 10.0.1</p>
-          <p>Support for 10.0.x continues on master</p>
-          <p>Cease support for 10.0.0.x (Jakarta EE 9)
-          <p>Create 9.10.x branch (from master with package rename &amp; API changes reverted)</p>
-          <p>Support for 9.10.x continues on 9.10.x</p>
-          <p>Support for 9.0.x continues on 9.0.x</p>
-          <p>Support for 8.5.x continues on 8.5.x</p>
-        </section>
-        <section>
-          <h3>When Jakarta EE 11 work starts</h3>
-          <p>Create 10.0.x branch</p>
-          <p>Plan EOL for 8.5.x</p>
-          <p>master becomes development branch for Jakarta EE 11
-        </section>
-        <section>
-          <h3>When Jakarta EE 11 is released</h3>
-          <p>Release 11.0.0</p>
-          <p>Create 9.11.x branch (from master with package rename &amp; API changes reverted)</p>
-          <p>Support for 11.0.x continues on master</p>
-          <p>Cease support for 9.10.x</p>
-          <p>Support for 10.0.x continues on 10.0.x</p>
-          <p>Support for 9.0.x continues on 9.0.x</p>
-          <p>And so on...</p>
+          <h3>Tomcat support time-scales</h3>
+          <p>Continue to support 3 major releases in parallel</p>
+          <p>Plus Java EE 8 compatible release</p>
+          <p>Major versions will track Jakarta EE platform releases</p>
+          <p>Expect each major release to continue to be supported for ~10 years</p>
         </section>
         <section>
           <h3>Eventually</h3>
-          <p>N (master): Supports Jakarta EE N</p>
-          <p>(N-1): Supports Jakarta EE (N-1)</p>
-          <p>(N-2): Supports Jakarta EE (N-2)</p>
-          <p>9.N: Continues to support Java EE 8 with Tomcat API identical to latest Tomcat N</p>
+          <p>Tomcat N.y.x (master): Supports Jakarta EE N</p>
+          <p>Tomcat (N-1).y.x: Supports Jakarta EE (N-1)</p>
+          <p>Tomcat (N-2).y.x : Supports Jakarta EE (N-2)</p>
+          <p>Tomact 9.N.x: Continues to support Java EE 8 with Tomcat API identical to latest Tomcat N</p>
           <p>See <a href="https://cwiki.apache.org/confluence/display/TOMCAT/Jakarta+EE+Release+Numbering">https://cwiki.apache.org/confluence/display/
           TOMCAT/Jakarta+EE+Release+Numbering</a>
         </section>
         <section>
-          <h3>Migration tool</h3>
-          <p><a href="https://github.com/apache/tomcat-jakartaee-migration">github.com/apache/tomcat-jakartaee-migration</a></p>
-          <p>No release so far</p>
-          <p>Only handles specifications used by Tomcat</p>
-          <p>Packages matched by regular expression so easy to add others</p>
-          <p>Used to convert Java EE 8 JSTL API and implementation to Jakarta EE 9</p>
-          <p>Want to test with more complex applications - Jira</p>
+          <h3>Jakarta EE Roadmap</h3>
+          <p>Long term under discussion</p>
+          <p>Short term minor enhancements and fixes</p>
+          <p>May be additional releases of individual specifications</p>
+          <p>Eg: Servlet 5.1</p>
+          <p>Current Tomcat release will update to these additional releases as they become available</p>
+          <p>Ie: Tomcat 10.0.x would update from Servlet 5.0 to Servlet 5.1 if there was a Servlet 5.1 release</p> 
         </section>
         <section data-external-replace="../modules/closing.html"> </section>
       </div>
